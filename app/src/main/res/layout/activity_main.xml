@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task 1"
+                android:layout_marginRight="10dp"
+                android:onClick="onClick"
+                android:id="@+id/btn_task1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task 2"
+                android:onClick="onClick"
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_task2"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task 3"
+                android:onClick="onClick"
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_task3"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task 4"
+                android:onClick="onClick"
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_task4"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task 5"
+                android:onClick="onClick"
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_task5"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:visibility="gone"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:id="@+id/tv_total_user"
+        android:text="Total users:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/ln_task_four"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add 5 user"
+            android:layout_margin="5dp"
+            android:onClick="onClick"
+            android:id="@+id/btn_add"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Remove 5 user"
+            android:layout_margin="5dp"
+            android:onClick="onClick"
+            android:id="@+id/btn_remove"/>
+    </LinearLayout>
+</LinearLayout>
